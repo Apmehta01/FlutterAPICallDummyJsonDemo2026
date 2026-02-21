@@ -1,6 +1,7 @@
 
 import 'package:apicalldemo/data/model/request/LoginRequest.dart';
 import 'package:apicalldemo/data/model/response/LoginResponse.dart';
+import 'package:apicalldemo/data/model/response/ProductResponse.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/error_logger.dart';
 import 'package:retrofit/http.dart';
@@ -16,4 +17,7 @@ abstract class ApiService{
 
   @POST(Constants.authAPI)
   Future<LoginResponse>login(@Body() LoginRequest loginRequest);
+
+  @GET(Constants.productAPI)
+  Future<ProductResponse>getProductList();
 }

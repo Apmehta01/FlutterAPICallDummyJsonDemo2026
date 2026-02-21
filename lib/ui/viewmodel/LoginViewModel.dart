@@ -7,7 +7,7 @@ import '../../data/model/request/LoginRequest.dart';
 import '../../data/model/response/LoginResponse.dart';
 import '../../domain/LoginRepository.dart';
 
-class LoginViewModel extends StateNotifier<ApiState<LoginResponse, LoginRequest>> {
+class LoginViewModel extends StateNotifier<ApiState> {
   final LoginRepository loginRepository;
 
   LoginViewModel(this.loginRepository)
